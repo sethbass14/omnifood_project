@@ -290,3 +290,40 @@ nav {
   width: auto;
   margin-right: 10px;
 }
+
+
+/* ----------------------------------------------- */
+/* CITIES */
+/* ----------------------------------------------- */
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+.icon-small {
+  color: #e76e22;
+  width: 30px;
+  font-size: 120%;
+  margin-right: 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+
+.city-feature a {
+  text-decoration: none;
+  color: #e76e22;
+  border-bottom: 1px solid #e76e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+.city-feature a:hover {
+  border-bottom: 1px solid transparent;
+  color: #555;
+}
