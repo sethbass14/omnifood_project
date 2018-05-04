@@ -311,9 +311,22 @@ nav {
   width: 30px;
   font-size: 120%;
   margin-right: 10px;
-  vertical-align: middle;
   text-align: center;
   display: inline-block;
+
+  /* secrets to align text and icons */
+  vertical-align: middle;
+  line-height: 120%;
+  margin-top: -4px;
+}
+
+.ion-social-twitter:hover {
+  transition: color 0.2s;
+}
+
+.ion-social-twitter:hover {
+  color: #1EADEB;
+  cursor: pointer;
 }
 
 .city-feature a {
@@ -327,3 +340,7 @@ nav {
   border-bottom: 1px solid transparent;
   color: #555;
 }
+
+/* ----------------------------------------------- */
+/* TESTIMONIALS */
+/* ----------------------------------------------- */
