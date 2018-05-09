@@ -422,4 +422,17 @@ cite img {
   background-color: #fcfcfc;
   border-bottom: 1px solid #f4f4f4;
   padding: 15px;
+  margin-bottom: 20px;
+}
+
+.plan-box li {
+  margin-bottom: 5px;
+  font-size: 90%;
+}
+
+.plan-box div:last-child {
+  border-top: 1px solid #f4f4f4;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
 }
