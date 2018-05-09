@@ -439,3 +439,41 @@ cite img {
   padding: 5px 0;
   font-size: 90%;
 }
+
+/* ----------------------------------------------- */
+/* CONTACT */
+/* ----------------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select, textarea {
+  width: 100%;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+input[type=submit] {
+  background-color: #e76e22;
+  color: white;
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  border: 1px solid #e76e22;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+input[type=submit]:hover {
+  background-color: #d05e17;
+  border: 1px solid #d05e17;
+  cursor: pointer;
+}
