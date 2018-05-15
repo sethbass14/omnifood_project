@@ -122,6 +122,42 @@ h3 {
   margin-top: -4px;
 }
 
+.ion-social-twitter:hover {
+  transition: color 0.2s;
+}
+
+.ion-social-twitter:hover {
+  color: #1EADEB;
+  cursor: pointer;
+}
+
+.ion-social-facebook:hover {
+  transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+  color: #3D5A96;
+  cursor: pointer;
+}
+
+.ion-social-googleplus:hover {
+  transition: color 0.2s;
+}
+
+.ion-social-googleplus:hover {
+  color: #DB4C3F;
+  cursor: pointer;
+}
+
+.ion-social-instagram:hover {
+  transition: color 0.2s;
+}
+
+.ion-social-instagram:hover {
+  color: #537FA2;
+  cursor: pointer;
+}
+
 /* ---- BUTTONS ----  */
 
 .btn:link,
@@ -325,15 +361,6 @@ nav {
   margin-bottom: 5px;
 }
 
-.ion-social-twitter:hover {
-  transition: color 0.2s;
-}
-
-.ion-social-twitter:hover {
-  color: #1EADEB;
-  cursor: pointer;
-}
-
 .city-feature a {
   text-decoration: none;
   color: #e76e22;
@@ -474,4 +501,49 @@ textarea {
 
 *:focus {
   outline: none;
+}
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+  background-color: #333333;
+  color: #888;
+  font-size: 75%;
+  padding: 50px;
+  height: 200px;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #888;
+  transition: color 0.2s;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.footer-nav li {
+  text-align: left;
+}
+
+.footer-nav a:hover {
+  color: white;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.social-links a {
+  font-size: 150%;
 }
