@@ -33,10 +33,20 @@
   .icon-small {
     width: 20px;
     margin-right: 5px;
-    /* font-size: 120%; */
   }
 
   .city-feature { font-size: 86%; }
+
+  .plan-box {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  .plan-price { font-size: 250%; }
+
+  .plan-box ul li { font-size: 80%; }
+
+  .contact-form { width: 80%; }
 
 }
 
