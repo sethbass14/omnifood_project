@@ -122,40 +122,28 @@ h3 {
   margin-top: -4px;
 }
 
-.ion-social-twitter:hover {
+.ion-social-twitter:hover,
+.ion-social-facebook:hover,
+.ion-social-googleplus:hover,
+.ion-social-instagram:hover {
   transition: color 0.2s;
+  cursor: pointer;
 }
 
 .ion-social-twitter:hover {
   color: #1EADEB;
-  cursor: pointer;
-}
-
-.ion-social-facebook:hover {
-  transition: color 0.2s;
 }
 
 .ion-social-facebook:hover {
   color: #3D5A96;
-  cursor: pointer;
-}
-
-.ion-social-googleplus:hover {
-  transition: color 0.2s;
 }
 
 .ion-social-googleplus:hover {
   color: #DB4C3F;
-  cursor: pointer;
-}
-
-.ion-social-instagram:hover {
-  transition: color 0.2s;
 }
 
 .ion-social-instagram:hover {
   color: #537FA2;
-  cursor: pointer;
 }
 
 /* ---- BUTTONS ----  */
@@ -529,7 +517,7 @@ footer a {
 
 footer p {
   text-align: center;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 .footer-nav li {
