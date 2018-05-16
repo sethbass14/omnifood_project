@@ -10,12 +10,14 @@
   /* border: 1px solid grey; */
 }
 
-html {
+html,
+body {
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 20px;
-  text-rendering: optimizeLegibility;;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {zoom: 1}
@@ -305,11 +307,6 @@ nav { padding-top: 50px; }
   font-size: 150%;
   margin-right: 25px;
 }
-
-/* .works-step div span {
-  text-align: center;
-  font-size: 150%;
-} */
 
 .btn-app img {
   height: 50px;
