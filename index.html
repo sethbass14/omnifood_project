@@ -12,15 +12,15 @@
   </head>
   <body>
     <header>
-      <nav class='sticky'>
+      <nav>
         <div class="row">
           <img src="resources/img/logo-white.png" alt="Omnifood logo" class='logo'>
-          <img src="resources/img/logo.png" alt="Omnifood logo" class='logo-black'>
+          <a href="#"><img src="resources/img/logo.png" alt="Omnifood logo" class='logo-black'></a>
           <ul class="main-nav">
-            <li><a href="#">Food Delivery</a></li>
-            <li><a href="#">How it Works</a></li>
-            <li><a href="#">Our Cities</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a href="#section-features">Food Delivery</a></li>
+            <li><a href="#section-steps">How it Works</a></li>
+            <li><a href="#cities">Our Cities</a></li>
+            <li><a href="#form-box">Sign Up</a></li>
           </ul>
         </div>
       </nav>
@@ -33,7 +33,7 @@
       </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="section-features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food</h2>
         <p class="long-copy"> Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise! </p>
@@ -111,7 +111,7 @@
 
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="section-steps">
       <div class="row">
         <h2>How it works - Simple as 1, 2, 3</h2>
       </div>
@@ -143,7 +143,7 @@
 
     </section>
 
-    <section class="cities">
+    <section class="cities" id="cities">
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
@@ -320,7 +320,7 @@
       </div>
     </section>
 
-    <section class="map-box">
+    <section class="map-box" id="form-box">
       <div class="form-box" id="form">
         <div class="row">
           <h2>We're happy to hear from you</h2>
@@ -414,6 +414,7 @@
       <script src="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
       <script src="http://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+      <script src="vendors/js/jquery.waypoints.min.js"></script>
       <script src="resources/js/scripts.js"></script>
   </body>
 
