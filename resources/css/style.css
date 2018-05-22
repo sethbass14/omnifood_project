@@ -249,16 +249,18 @@ nav { padding-top: 50px; }
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 20px;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
   z-index: 1;
 }
 
-.sticky .main-nav { margin-top: 8px; }
+.sticky .main-nav { margin-top: 16px; }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
   padding: 16px;
+  padding-bottom: 20px;
   /* text-decoration: none; */
   color: #555;
 }
