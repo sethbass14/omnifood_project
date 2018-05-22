@@ -251,9 +251,10 @@ nav { padding-top: 50px; }
   width: 100%;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
+  z-index: 1;
 }
 
-.main-nav { margin-top: 18px; }
+.sticky .main-nav { margin-top: 8px; }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {

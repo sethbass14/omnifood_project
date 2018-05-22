@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const scrolledPast = element => {
   let bodyRect = document.body.getBoundingClientRect();
   let elemRect = element.getBoundingClientRect();
-  let offSet = elemRect.top - bodyRect.top
+  let offSet = elemRect.top - bodyRect.top - 120
   const currentHeight = window.scrollY
   return offSet <= currentHeight
 }
