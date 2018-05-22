@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toPlansBtn = document.getElementsByClassName('js--scroll-to-plans')[0]
+  const toFeaturesBtn = document.getElementsByClassName('js--scroll-to-start')[0]
 
   const sectionFeatures = document.getElementsByClassName('section-features')[0]
   const nav = document.getElementsByTagName('nav')[0]
@@ -7,31 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('scroll', () => stickyify(sectionFeatures, nav))
   toPlansBtn.addEventListener('click', () => smoothScrollHandler(sectionPlans))
-  // $('js--scroll-to-plans').click(function () {
-  //   $('html, body').animate({scrollTop: $('js--section-plans').offset().top}, 1000);
-  // })
+  toFeaturesBtn.addEventListener('click', () => smoothScrollHandler(sectionFeatures))
 })
 
 const getOffSet = scrollEl => {
-  
-}
-
-const scrolledPast = (scrollEl, navEl) => {
   const bodyRect = document.body.getBoundingClientRect();
   const scrollRect = scrollEl.getBoundingClientRect();
   // 80 is the height of the sticky nav bar. Offsetting here makes the nav appear as its height hits the next section.
   const offSet = scrollRect.top - bodyRect.top - 80
+  return offSet
+}
+
+const scrolledPast = scrollEl => {
+  const offSet = getOffSet(scrollEl)
   const currentHeight = window.scrollY
   return offSet <= currentHeight
 }
 
 const stickyify = (scrollEl, navEl) =>
-  navEl.className = scrolledPast(scrollEl, navEl) ? 'sticky' : ''
+  navEl.className = scrolledPast(scrollEl) ? 'sticky' : ''
 
 const smoothScrollHandler = scrollEl => {
   const bodyRect = document.body.getBoundingClientRect();
   const scrollElRect = scrollEl.getBoundingClientRect();
-  const offset = scrollElRect.top - bodyRect.top;
+  const offset = getOffSet(scrollEl)
   window.scroll({
     top: offset,
     behavior: 'smooth'
