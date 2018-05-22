@@ -29,8 +29,6 @@ const stickyify = (scrollEl, navEl) =>
   navEl.className = scrolledPast(scrollEl) ? 'sticky' : ''
 
 const smoothScrollHandler = scrollEl => {
-  const bodyRect = document.body.getBoundingClientRect();
-  const scrollElRect = scrollEl.getBoundingClientRect();
   const offset = getOffSet(scrollEl)
   window.scroll({
     top: offset,
