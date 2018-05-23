@@ -1,5 +1,5 @@
 const RISE_UP = 'rise-up';
-const oneSec = '1.0s';
+const ONE_SECOND = '1.0s';
 
 document.addEventListener('DOMContentLoaded', () => {
   const scrollBtns = [...document.getElementsByClassName('scroll-buttons')];
@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementsByTagName('nav')[0];
   const sectionFeatures = document.getElementsByClassName('section-features')[0];
   const sectionPlans = document.getElementsByClassName('section-plans')[0];
+  const sectionSteps = document.getElementsByClassName('section-steps')[0];
 
   const appScreen = document.getElementsByClassName('app-screen')[0];
 
   addNavClickListener(scrollBtns);
-  document.addEventListener('scroll', () => scrollHandler(sectionFeatures, nav));
+  document.addEventListener('scroll', () => scrollHandler(sectionFeatures, nav, sectionSteps, appScreen));
 
 });
 
@@ -36,8 +37,11 @@ const getOffSet = scrollEl => {
   return offSet
 }
 
-const scrollHandler = (sectionFeatures, nav) => {
+const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
   stickyify(sectionFeatures, nav)
+  if (scrolledPast(sectionSteps)) {
+    appScreen.className = 'app-screen app-animate '
+  }
 }
 
 const scrolledPast = scrollEl => {

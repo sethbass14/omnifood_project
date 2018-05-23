@@ -352,9 +352,15 @@ nav { padding-top: 50px; }
 .app-screen {
   width: 40%;
   position: relative;
-  top: 7200px
+  display: none;
   /* animation-name: rise-up; */
   /* animation-duration: 1.0s; */
+}
+
+.app-animate {
+  display: block;
+  animation-name: rise-up;
+  animation-duration: 1.0s;
 }
 
 @keyframes rise-up {
