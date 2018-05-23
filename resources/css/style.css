@@ -349,7 +349,18 @@ nav { padding-top: 50px; }
   margin-top: 70px;
 }
 
-.app-screen { width: 40%; }
+.app-screen {
+  width: 40%;
+  position: relative;
+  top: 7200px
+  /* animation-name: rise-up; */
+  /* animation-duration: 1.0s; */
+}
+
+@keyframes rise-up {
+  from { top: 7200px }
+  to {top: 0 }
+}
 
 .works-step { margin-bottom: 50px; }
 
@@ -374,6 +385,8 @@ nav { padding-top: 50px; }
   width: auto;
   margin-right: 10px;
 }
+
+
 
 
 /* ----------------------------------------------- */
