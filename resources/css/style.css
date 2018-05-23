@@ -209,6 +209,10 @@ header {
   margin: 5px 0;
 }
 
+.logo-black:hover {
+  cursor: pointer;
+}
+
 nav { padding-top: 50px; }
 
 /* Main nav  */
