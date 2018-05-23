@@ -358,14 +358,15 @@ nav { padding-top: 50px; }
 }
 
 .app-animate {
-  display: block;
+  display: inline;
+  position: relative;
   animation-name: rise-up;
-  animation-duration: 1.0s;
+  animation-duration: 2.0s;
 }
 
 @keyframes rise-up {
-  from { top: 7200px }
-  to {top: 0 }
+  from { top: 300px; opacity: 0 }
+  to {top: 0; opacity: 1 }
 }
 
 .works-step { margin-bottom: 50px; }

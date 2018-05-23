@@ -37,11 +37,36 @@ const getOffSet = scrollEl => {
   return offSet
 }
 
+const getBottomOffSet = scrollEl => {
+  const bodyRect = document.body.getBoundingClientRect();
+  const scrollRect = scrollEl.getBoundingClientRect();
+  const offSet = scrollRect.top - bodyRect.top + scrollRect.height/2
+  return offSet
+}
+
+// const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
+//   stickyify(sectionFeatures, nav)
+//   if (scrolledPast(sectionSteps)) {
+//     appScreen.className = 'app-screen app-animate '
+//   }
+// }
+
 const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
   stickyify(sectionFeatures, nav)
-  if (scrolledPast(sectionSteps)) {
+  if (scrolledTo(sectionSteps) && inView(sectionSteps)) {
     appScreen.className = 'app-screen app-animate '
   }
+}
+
+const scrolledTo = scrollEl => {
+  const offSetBottom = getBottomOffSet(scrollEl)
+  const currentBottom = window.innerHeight + window.scrollY
+  return offSetBottom <= currentBottom
+}
+
+const inView = scrollEl => {
+  const elTop = getBottomOffSet(scrollEl) + 80
+  return elTop >= window.scrollY
 }
 
 const scrolledPast = scrollEl => {
