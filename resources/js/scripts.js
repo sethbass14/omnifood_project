@@ -1,15 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toPlansBtn = document.getElementsByClassName('js--scroll-to-plans')[0]
-  const toFeaturesBtn = document.getElementsByClassName('js--scroll-to-start')[0]
+  // const toPlansBtn = document.getElementsByClassName('js--scroll-to-plans')[0]
+  // const toFeaturesBtn = document.getElementsByClassName('js--scroll-to-start')[0]
+  const scrollBtns = [...document.getElementsByClassName('scroll-buttons')]
+  addNavClickListener(scrollBtns)
 
-  const sectionFeatures = document.getElementsByClassName('section-features')[0]
   const nav = document.getElementsByTagName('nav')[0]
+  const sectionFeatures = document.getElementsByClassName('section-features')[0]
   const sectionPlans = document.getElementsByClassName('section-plans')[0]
 
   document.addEventListener('scroll', () => stickyify(sectionFeatures, nav))
-  toPlansBtn.addEventListener('click', () => smoothScrollHandler(sectionPlans))
-  toFeaturesBtn.addEventListener('click', () => smoothScrollHandler(sectionFeatures))
+  // toPlansBtn.addEventListener('click', () => smoothScrollHandler(sectionPlans))
+  // toFeaturesBtn.addEventListener('click', () => smoothScrollHandler(sectionFeatures))
 })
+
+const addNavClickListener = navEls => {
+  navEls.forEach(link => {
+    const scrollEl = document.getElementById(link.dataset.scrollid)
+    link.addEventListener('click', () => smoothScrollHandler(scrollEl))
+  })
+}
 
 const getOffSet = scrollEl => {
   const bodyRect = document.body.getBoundingClientRect();
