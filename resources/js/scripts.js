@@ -1,17 +1,25 @@
+const RISE_UP = 'rise-up';
+const oneSec = '1.0s';
+
 document.addEventListener('DOMContentLoaded', () => {
-  // const toPlansBtn = document.getElementsByClassName('js--scroll-to-plans')[0]
-  // const toFeaturesBtn = document.getElementsByClassName('js--scroll-to-start')[0]
-  const scrollBtns = [...document.getElementsByClassName('scroll-buttons')]
-  addNavClickListener(scrollBtns)
+  const scrollBtns = [...document.getElementsByClassName('scroll-buttons')];
 
-  const nav = document.getElementsByTagName('nav')[0]
-  const sectionFeatures = document.getElementsByClassName('section-features')[0]
-  const sectionPlans = document.getElementsByClassName('section-plans')[0]
+  const nav = document.getElementsByTagName('nav')[0];
+  const sectionFeatures = document.getElementsByClassName('section-features')[0];
+  const sectionPlans = document.getElementsByClassName('section-plans')[0];
 
-  document.addEventListener('scroll', () => stickyify(sectionFeatures, nav))
-  // toPlansBtn.addEventListener('click', () => smoothScrollHandler(sectionPlans))
-  // toFeaturesBtn.addEventListener('click', () => smoothScrollHandler(sectionFeatures))
-})
+  const appScreen = document.getElementsByClassName('app-screen')[0];
+
+  addNavClickListener(scrollBtns);
+  document.addEventListener('scroll', () => scrollHandler(sectionFeatures, nav));
+
+});
+
+const animate = (element, animation, duration) => {
+  element.style.animationName = animation
+  element.style.animationDuration = duration
+  element.style.top = 0;
+}
 
 const addNavClickListener = navEls => {
   navEls.forEach(link => {
@@ -26,6 +34,10 @@ const getOffSet = scrollEl => {
   // 80 is the height of the sticky nav bar. Offsetting here makes the nav appear as its height hits the next section.
   const offSet = scrollRect.top - bodyRect.top - 80
   return offSet
+}
+
+const scrollHandler = (sectionFeatures, nav) => {
+  stickyify(sectionFeatures, nav)
 }
 
 const scrolledPast = scrollEl => {
