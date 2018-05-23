@@ -44,16 +44,9 @@ const getBottomOffSet = scrollEl => {
   return offSet
 }
 
-// const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
-//   stickyify(sectionFeatures, nav)
-//   if (scrolledPast(sectionSteps)) {
-//     appScreen.className = 'app-screen app-animate '
-//   }
-// }
-
 const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
   stickyify(sectionFeatures, nav)
-  if (scrolledTo(sectionSteps) && inView(sectionSteps)) {
+  if (scrolledTo(sectionSteps)) {
     appScreen.className = 'app-screen app-animate '
   }
 }
@@ -61,7 +54,7 @@ const scrollHandler = (sectionFeatures, nav, sectionSteps, appScreen) => {
 const scrolledTo = scrollEl => {
   const offSetBottom = getBottomOffSet(scrollEl)
   const currentBottom = window.innerHeight + window.scrollY
-  return offSetBottom <= currentBottom
+  return offSetBottom <= currentBottom && inView(scrollEl)
 }
 
 const inView = scrollEl => {
